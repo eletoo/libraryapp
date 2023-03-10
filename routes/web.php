@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FrontController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/* 
+| Attivo questa rotta quando ricevo una chiamata http GET
+| parametri:
+| - URL della rotta a partire da localhost:porta
+| - controller e suo metodo da eseguire 
+*/
+Route::get('/', [FrontController::class, 'getHome'])->name('home');
+
+//Route::Resource('/', [FrontController::class, 'getBooks'])->name('books');
+//Route::Resource('/', [FrontController::class, 'getAuthors'])->name('authors');
