@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Book extends Model
+class Author extends Model
 {
     use HasFactory;
-    protected $table = 'book'; //Book corrisponderà alla tabella book del database
+    protected $table = 'author';
 
-    public function author(){
-        return $this->belongsTo(Author::class,'author_id','id');
+    public function books()
+    {
+        return $this->hasMany(Book::class,'author_id','id'); 
         // ogni book ha come chiave esterna author_id e author_id internamente a un oggetto Author a punta a id
     }
 }
