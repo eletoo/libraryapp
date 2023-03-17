@@ -2,17 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\AuthorController;
 
 /* 
 | Attivo questa rotta quando ricevo una chiamata http GET
@@ -21,6 +12,5 @@ use App\Http\Controllers\FrontController;
 | - controller e suo metodo da eseguire 
 */
 Route::get('/', [FrontController::class, 'getHome'])->name('home');
-
-//Route::Resource('/', [FrontController::class, 'getBooks'])->name('books');
-//Route::Resource('/', [FrontController::class, 'getAuthors'])->name('authors');
+Route::get('/book', [BookController::class, 'index'])->name('book.index');
+Route::get('/author', [AuthorController::class, 'index'])->name('author.index');

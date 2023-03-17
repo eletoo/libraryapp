@@ -9,7 +9,7 @@
     <!--FOGLI DI STILE-->
     <link rel="stylesheet" href="{{ url('/') }}/css/bootstrap.min.css" />
     <!--bootstrap.min.css non ha spazi e indentazioni, il file pesa meno di bootstrap.css ma sono la stessa cosa-->
-    <link rel="stylesheet" href="{{ url('/') }}/css/style.css" />
+    <link rel="stylesheet" href="{{ url('/') }}/css/@yield('style')" />
 
     <!--JAVASCRIPT-->
     <script src="{{ url('/') }}/js/bootstrap.bundle.min.js"></script>
@@ -33,6 +33,10 @@
             </div>
         </div>
     </nav>
+
+    <div class="container">
+        @yield('breadcrumb')
+    </div>
 
     <!--HEADER-->
     <div class="container">
