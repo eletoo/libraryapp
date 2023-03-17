@@ -52,12 +52,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>The Lord of the Rings</td>
-                        <td>J.R.R.Tolkien</td>
-                        <td><a class="btn btn-primary" href="#">Edit</a></td>
-                        <td><a class="btn btn-danger" href="#">Delete</a></td>
-                    </tr>
+                    @foreach($books_list as $book)
+                        <tr>
+                            <td>{{$book->title}}</td>
+                            <td>{{$book->author_surname}}</td>
+                            <td><a class="btn btn-primary" href="#">Edit</a></td>
+                            <td><a class="btn btn-danger" href="#">Delete</a></td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
