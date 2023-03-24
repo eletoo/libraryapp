@@ -56,7 +56,7 @@
                 <tbody>
                     @foreach($authors_list as $author)
                         <tr>
-                            <td>{{$author->lastname}}, {{$author->firstname}} </td>
+                            <td>{{$author->firstname}} {{$author->lastname}}</td>
                             <td><a class="btn btn-primary" href="#">See Books</a></td>
                         </tr>
                     @endforeach
