@@ -9,6 +9,8 @@ class Author extends Model
 {
     use HasFactory;
     protected $table = 'author';
+    public $timestamps = false;
+    protected $fillable = ['first_name', 'last_name'];
 
     public function books()
     {
