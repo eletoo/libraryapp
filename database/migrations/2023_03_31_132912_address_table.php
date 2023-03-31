@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      *
@@ -13,14 +12,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('book', function (Blueprint $table){
+        Schema::create('address', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
+            $table->string('street_and_number');
+            $table->string('city');
+            $table->string('province');
+            $table->string('country');
+            $table->string('postcode');
             $table->integer('author_id')->unsigned();
         });
 
-        // modifica una tabella già esistente
-        Schema::table('book', function (Blueprint $table){
+        Schema::table('address', function (Blueprint $table) {
             $table->foreign('author_id')->references('id')->on('author');
         });
     }
@@ -32,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('book');
+        Schema::dropIfExists('address');
     }
 };
