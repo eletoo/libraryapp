@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ url('/') }}/css/bootstrap.min.css" />
     <!--bootstrap.min.css non ha spazi e indentazioni, il file pesa meno di bootstrap.css ma sono la stessa cosa-->
     <link rel="stylesheet" href="{{ url('/') }}/css/@yield('style')" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
     <!--JAVASCRIPT-->
     <script src="{{ url('/') }}/js/bootstrap.bundle.min.js"></script>

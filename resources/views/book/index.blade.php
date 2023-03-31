@@ -31,11 +31,12 @@
 @endsection
 
 @section('body')
-    <div class="row">  
-        <div class="col-md-offset-10 col-xs-6">
-            <a href="#" class="btn btn-primary">Add Book</a>
+<div class="row">  
+        <div class="col-md-offset-10 col-md-12">
+            <a href="#" class="btn btn-success"><i class="bi bi-book"></i> Add New Book</a>
         </div>      
     </div>
+    <br></br>
     <div class="row ">
         <div class="col-md-12">
             <table class="table table-striped table-hover table-responsive">
@@ -56,8 +57,8 @@
                         <tr>
                             <td>{{$book->title }}</td>
                             <td>{{$book->author->first_name}} {{$book->author->last_name }}</td>
-                            <td><a class="btn btn-primary" href="#">Edit</a></td>
-                            <td><a class="btn btn-danger" href="#">Delete</a></td>
+                            <td><a class="btn btn-primary" href="#"><i class="bi bi-pencil-square"></i> Edit</a></td>
+                            <td><a class="btn btn-danger" href="#"><i class="bi bi-trash3"></i> Delete</a></td>
                         </tr>
                     @endforeach
                 </tbody>
