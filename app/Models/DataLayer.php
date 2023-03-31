@@ -5,7 +5,7 @@ namespace App\Models;
 class DataLayer {
     // contiene tutti i metodi per interagire con il DB
     public function listAuthors(){
-        return Author::orderBy('lastname','asc')->orderBy('firstname','asc')->get();
+        return Author::orderBy('last_name','asc')->orderBy('first_name','asc')->get();
     }
 
     public function listBooks(){

@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('author', function (Blueprint $table) {
             $table->increments('id'); 
-            $table->string('firstname');
-            $table->string('lastname');
+            $table->string('first_name');
+            $table->string('last_name');
         });
 
         //potremmo creare una migration per ogni tabella senza mettere le chiavi esterne e infine una migration
