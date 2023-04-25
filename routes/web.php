@@ -12,5 +12,8 @@ use App\Http\Controllers\AuthorController;
 | - controller e suo metodo da eseguire 
 */
 Route::get('/', [FrontController::class, 'getHome'])->name('home');
-Route::get('/book', [BookController::class, 'index'])->name('book.index');
+
+//Route::get('/book', [BookController::class, 'index'])->name('book.index'); //rotta inclusa nella riga successiva
+Route::resource('book',BookController::class);
+
 Route::get('/author', [AuthorController::class, 'index'])->name('author.index');

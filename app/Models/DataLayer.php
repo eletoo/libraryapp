@@ -11,4 +11,12 @@ class DataLayer {
     public function listBooks(){
         return Book::orderBy('title','asc')->get();
     }
+
+    public function addBook($title, $authorid)
+    {
+        $newbook = new Book;
+        $newbook->title= $title;
+        $newbook->author_id= $authorid;
+        $newbook->save();
+    }
 }
