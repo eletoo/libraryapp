@@ -59,8 +59,8 @@
                     <tr>
                         <td>{{$book->title }}</td>
                         <td>{{$book->author->first_name}} {{$book->author->last_name }}</td>
-                        <td><a class="btn btn-primary" href="#"><i class="bi bi-pencil-square"></i> Edit</a></td>
-                        <td><a class="btn btn-danger" href="#"><i class="bi bi-trash3"></i> Delete</a></td>
+                        <td><a class="btn btn-primary" href="{{route('book.edit', ['book'=>$book->id])}}"><i class="bi bi-pencil-square"></i> Edit</a></td>
+                        <td><a class="btn btn-danger" href="{{route('book.destroy', ['book'=>$book->id])}}"><i class="bi bi-trash3"></i> Delete</a></td>
                     </tr>
                 @endforeach
             </tbody>
